@@ -1,19 +1,13 @@
 <script setup lang="ts">
-import { ref } from 'vue'
 
-import ControlPanel from './components/ControlPanel.vue';
-import UserCamera from './components/UserCamera.vue';
 
-const isCameraActive = ref(false);
+import RoomJoin from './components/RoomJoin.vue';
+
 </script>
 
 <template>
   
-  <ControlPanel
-    :is-camera-active="isCameraActive"
-    @toggle-camera="isCameraActive = !isCameraActive"
-  />
-  <UserCamera v-if="isCameraActive" />
+  <RoomJoin />
 </template>
 
 <style scoped>
